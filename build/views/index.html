@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block title %} 超级模板引擎 {% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/css/index.css">
+{% parent %}
+    <!-- <link rel="stylesheet" href="custom.css"> -->
+{% endblock %}
+{% block content %}
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">逆转消息</button>
+    </div>
+    <div>
+        <h1>[[data]]</h1>
+        <h1>{{data}}</h1>
+    </div>
+     {% block scripts %}
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="/js/index.js"></script>
+     {% endblock %}
+{% endblock %}
